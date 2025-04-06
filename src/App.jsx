@@ -85,13 +85,7 @@ const App = () => {
       <h2>My todos:</h2>
       <ul>
         {todoList.map((todo) => (
-            <li key={todo.id} className={todo.completed ? 'completed' : ''}>
-              <input 
-                type="checkbox" 
-                id={todo.name}
-                checked={todo.completed}
-                onChange={e => toggleTodo(todo.id, e.target.checked)}
-              />
+            <li key={todo.id}>
               {editingTodoId === todo.id? 
                 <>
                   <input 
@@ -113,7 +107,15 @@ const App = () => {
                 </> 
                 : 
                 <>
-                  <label htmlFor={todo.name} className='inline'>{todo.name}</label>
+                  <label htmlFor={todo.name} className='todo-item'>
+                  <input 
+                    type="checkbox" 
+                    id={todo.name}
+                    checked={todo.completed}
+                    onChange={e => toggleTodo(todo.id, e.target.checked)}
+                  />
+                  <span className={todo.completed ? 'completed' : ''}>{todo.name}</span>
+                  </label>
                   <button onClick={() => startEditingTodo(todo.id, todo.name)}>Edit</button>
                   <button onClick={() => deleteTodo(todo.id)}>Delete</button>
                 </>}
