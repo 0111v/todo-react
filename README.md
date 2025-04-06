@@ -1,5 +1,4 @@
 
-```markdown
 # 📝 React Todo App
 
 A clean, responsive, and editable Todo List application built with **React** and **Vite**, designed to showcase practical front-end development skills. This project demonstrates state management, local storage persistence, responsive design, and GitHub Pages deployment.
@@ -35,7 +34,6 @@ A clean, responsive, and editable Todo List application built with **React** and
 - Troubleshooting build/deploy pipelines
 
 ## 🧰 Getting Started
-```
 
 ### Clone the repo:
 
